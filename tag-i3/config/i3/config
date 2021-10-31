@@ -125,7 +125,7 @@ exec_always --no-startup-id $term --class math -e eva
 bindsym $mod+m [instance="math"] scratchpad show; [instance="math"] move position center
 
 # start rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+d exec --no-startup-id ~/.dotfiles/tag-polybar/config/polybar/cuts/scripts/launcher.sh
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 
