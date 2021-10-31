@@ -43,8 +43,8 @@ for_window [class="mail thunderbird"]         floating enable resize set 1300 90
 #font pango:DejaVu Sans Mono 8
 #开机启动项目
 #exec_always --no-startup-id clash
-#exec_always --no-startup-id bash /home/allen/scripts/wallpaper-wrap.sh && sleep 1 && compton --conf ~/.config/compton/compton.conf
-exec_always --no-startup-id bash /home/allen/scripts/wallpaper.sh
+#exec_always --no-startup-id bash /home/allen/.dotfiles/tag-scripts/scripts/wallpaper-wrap.sh && sleep 1 && compton --conf ~/.config/compton/compton.conf
+exec_always --no-startup-id bash /home/allen/./dotfiles/tag-scripts/scripts/wallpaper.sh
 exec_always --no-startup-id compton --conf ~/.config/compton/compton.conf
 exec_always --no-startup-id bash ~/.config/polybar/launch.sh --cuts
 #exec_always --no-startup-id variety
