@@ -1,0 +1,14 @@
+package argu
+package autojump
+package bang-bang
+package expand
+package fzf
+package fzf-autojump
+package https://github.com/decors/fish-colored-man
+package proxy
+package wttr
+theme agnoster
+theme default
+theme emoji-powerline
+theme es
+theme toaster

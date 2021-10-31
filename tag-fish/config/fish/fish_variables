@@ -1,0 +1,54 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export ALL_PROXY:http\x3a//127\x2e0\x2e0\x2e1\x3a8889/
+SETUVAR --export FTP_PROXY:http\x3a//127\x2e0\x2e0\x2e1\x3a8889/
+SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2040\x25
+SETUVAR FZF_DISABLE_KEYBINDINGS:0
+SETUVAR FZF_LEGACY_KEYBINDINGS:1
+SETUVAR FZF_PREVIEW_DIR_CMD:ls
+SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
+SETUVAR FZF_TMUX_HEIGHT:40\x25
+SETUVAR --export HTTPS_PROXY:http\x3a//127\x2e0\x2e0\x2e1\x3a8889/
+SETUVAR --export HTTP_PROXY:http\x3a//127\x2e0\x2e0\x2e1\x3a8889/
+SETUVAR ZO_CMD:zo
+SETUVAR Z_CMD:z
+SETUVAR Z_DATA:/home/allen/\x2elocal/share/z/data
+SETUVAR Z_DATA_DIR:/home/allen/\x2elocal/share/z
+SETUVAR Z_EXCLUDE:\x5e/home/allen\x24
+SETUVAR __fish_initialized:3100
+SETUVAR _fisher_PatrickF1_2F_fzf_2E_fish_files:/home/allen/\x2econfig/fish/functions/_fzf_configure_bindings_help\x2efish\x1e/home/allen/\x2econfig/fish/functions/_fzf_extract_var_info\x2efish\x1e/home/allen/\x2econfig/fish/functions/_fzf_preview_file\x2efish\x1e/home/allen/\x2econfig/fish/functions/_fzf_report_file_type\x2efish\x1e/home/allen/\x2econfig/fish/functions/_fzf_search_directory\x2efish\x1e/home/allen/\x2econfig/fish/functions/_fzf_search_git_log\x2efish\x1e/home/allen/\x2econfig/fish/functions/_fzf_search_git_status\x2efish\x1e/home/allen/\x2econfig/fish/functions/_fzf_search_history\x2efish\x1e/home/allen/\x2econfig/fish/functions/_fzf_search_variables\x2efish\x1e/home/allen/\x2econfig/fish/functions/_fzf_wrapper\x2efish\x1e/home/allen/\x2econfig/fish/functions/fzf_configure_bindings\x2efish\x1e/home/allen/\x2econfig/fish/conf\x2ed/fzf\x2efish\x1e/home/allen/\x2econfig/fish/completions/fzf_configure_bindings\x2efish
+SETUVAR _fisher_decors_2F_fish_2D_colored_2D_man_files:/home/allen/\x2econfig/fish/functions/man\x2efish
+SETUVAR _fisher_h_2D_matsuo_2F_fish_2D_color_2D_scheme_2D_switcher_files:/home/allen/\x2econfig/fish/functions/__scheme_get_definition\x2efish\x1e/home/allen/\x2econfig/fish/functions/__scheme_list\x2efish\x1e/home/allen/\x2econfig/fish/functions/__scheme_preview\x2efish\x1e/home/allen/\x2econfig/fish/functions/__scheme_set\x2efish\x1e/home/allen/\x2econfig/fish/functions/scheme\x2efish\x1e/home/allen/\x2econfig/fish/completions/scheme\x2efish
+SETUVAR _fisher_jethrokuan_2F_z_files:/home/allen/\x2econfig/fish/functions/__z\x2efish\x1e/home/allen/\x2econfig/fish/functions/__z_add\x2efish\x1e/home/allen/\x2econfig/fish/functions/__z_clean\x2efish\x1e/home/allen/\x2econfig/fish/functions/__z_complete\x2efish\x1e/home/allen/\x2econfig/fish/conf\x2ed/z\x2efish
+SETUVAR _fisher_plugins:jethrokuan/z\x1edecors/fish\x2dcolored\x2dman\x1eh\x2dmatsuo/fish\x2dcolor\x2dscheme\x2dswitcher\x1ePatrickF1/fzf\x2efish
+SETUVAR --export all_proxy:http\x3a//127\x2e0\x2e0\x2e1\x3a8889/
+SETUVAR fish_color_autosuggestion:555\x1ebrblack
+SETUVAR fish_color_cancel:\x2dr
+SETUVAR fish_color_command:005fd7
+SETUVAR fish_color_comment:990000
+SETUVAR fish_color_cwd:green
+SETUVAR fish_color_cwd_root:red
+SETUVAR fish_color_end:009900
+SETUVAR fish_color_error:ff0000
+SETUVAR fish_color_escape:00a6b2
+SETUVAR fish_color_history_current:\x2d\x2dbold
+SETUVAR fish_color_host:normal
+SETUVAR fish_color_host_remote:yellow
+SETUVAR fish_color_normal:normal
+SETUVAR fish_color_operator:00a6b2
+SETUVAR fish_color_param:00afff
+SETUVAR fish_color_quote:999900
+SETUVAR fish_color_redirection:00afff
+SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_status:red
+SETUVAR fish_color_user:brgreen
+SETUVAR fish_color_valid_path:\x2d\x2dunderline
+SETUVAR fish_key_bindings:fish_vi_key_bindings
+SETUVAR fish_pager_color_completion:\x1d
+SETUVAR fish_pager_color_description:B3A06D\x1eyellow
+SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
+SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR --export ftp_proxy:http\x3a//127\x2e0\x2e0\x2e1\x3a8889/
+SETUVAR --export http_proxy:http\x3a//127\x2e0\x2e0\x2e1\x3a8889/
+SETUVAR --export https_proxy:http\x3a//127\x2e0\x2e0\x2e1\x3a8889/

@@ -1,0 +1,126 @@
+conky.config = {
+--#####################
+-- - Conky settings - #
+--#####################
+	update_interval = 1,
+	total_run_times = 0,
+	net_avg_samples = 1,
+	cpu_avg_samples = 1,
+
+	imlib_cache_size = 0,
+	double_buffer = true,
+	no_buffers = true,
+
+--####################
+-- - Text settings - #
+--####################
+	use_xft = true,
+	font = 'Source Code Pro:size=10',
+	font = 'Source Code Pro:size=10',
+	override_utf8_locale = true,
+	text_buffer_size = 2048,
+
+--############################
+-- - Window specifications - #
+--#############################
+	own_window = true,
+	own_window_transparent = true,
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+--own_window_argb_visual yes
+--own_window_argb_value 100
+
+	alignment = 'bottom_left',
+	gap_x = 1620,
+	gap_y = 250,
+	minimum_width = 190, minimum_height = 180,
+
+
+	default_bar_width = 60, default_bar_height = 8,
+
+--########################
+-- - Graphics settings - #
+--########################
+	draw_shades = false,
+
+	default_color = '#efefef',
+	default_shade_color = '#1d1d1d',
+	color0 = '#ffffff',
+	color1 = '#ffffff',
+	color2 = '#ffffff',
+
+
+    alignment = 'bottom_left',
+    background = false,
+    border_width = 0,
+    border_inner_margin = 8,
+    cpu_avg_samples = 2,
+    default_color = '#eeeeee',
+    color1 = 'e0ffff',
+    color2 = '7affff',
+    default_outline_color = 'white',
+    default_shade_color = '#999999',
+    double_buffer = true,
+    draw_borders = false,
+    draw_graph_borders = false,
+    draw_outline = false,
+    draw_shades = false,
+    extra_newline = false,
+    font = 'Operator Mono Bold:style=Bold Italic:size=8',
+    minimum_height = 240,
+    minimum_width = 180,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    own_window = true,
+    own_window_colour = '#111111',
+    own_window_transparent = false,
+    own_window_argb_visual = true,
+    own_window_argb_value = 128,
+    own_window_class = 'Conky',
+    own_window_type = 'override',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    show_graph_range = false,
+    show_graph_scale = false,
+    stippled_borders = 0,
+    update_interval = 1,
+    uppercase = false,
+    use_spacer = 'none',
+    use_xft = true,
+}
+
+conky.text = [[
+# ${font Open Sans Light:pixelsize=50}${time %H:%M:%S}${font}
+${voffset 1}${alignc}${color FCFEFB}${font Operator Mono Bold:style=Bold Italic:size=14}${execpi 300 export LC_TIME=C; DJS=`date +%_d`; cal | sed '/./!d;1s/  //g;2,8s/^/ /;:a;7,8s/^.\{1,20\}$/& /;ta;s/ '"$DJS"'/ ${font Operator Mono Bold:style=Bold Italic:size=14}${color #EE6363}'"$DJS"'${font Operator Mono Bold:style=Bold Italic:size=14}${color FCFEFB}/'}
+
+${font Operator Mono Bold:style=Bold Italic:size=11}CPU1 ${color FCFEFB}${cpu cpu1}% ${cpubar cpu1} ${freq_g 1}Ghz
+${font Operator Mono Bold:style=Bold Italic:size=11}CPU2 ${color FCFEFB}${cpu cpu2}% ${cpubar cpu2} ${freq_g 2}Ghz
+${font Operator Mono Bold:style=Bold Italic:size=11}CPU3 ${color FCFEFB}${cpu cpu3}% ${cpubar cpu3} ${freq_g 3}Ghz
+${font Operator Mono Bold:style=Bold Italic:size=11}CPU4 ${color FCFEFB}${cpu cpu4}% ${cpubar cpu4} ${freq_g 4}Ghz
+${font Operator Mono Bold:style=Bold Italic:size=11}RAM $memperc% ${membar memperc}
+${offset 1}${font Operator Mono Bold:style=Bold Italic:size=10}${color FCFEFB}Procs:${color FCFEFB} $processes  ${color FCFEFB}Run:${color FCFEFB} $running_processes Temp: ${acpitemp}°C
+
+
+${font Operator Mono Bold:style=Bold Italic:size=12}${color FCFEFB}NETWORK ${hr 2}${font}
+${offset 15}${color FCFEFB}GateWay:${color 126c77}${alignr}${gw_ip}
+${offset 5}${font Operator Mono Bold:style=Bold Italic:size=12}${color 16A085}LAN  ${stippled_hr 1}
+${offset 15}${font}${color FCFEFB}IPv4 Addr ${color 126c77}${alignr}${addr lo}
+${offset 15}${color FCFEFB}${font}down ${color FCFEFB}${downspeed lo} ${alignr}${color FCFEFB}up ${color FCFEFB}${upspeed lo}
+${offset 5}${font Operator Mono Bold:style=Bold Italic:size=12}${color 16A085}${wireless_essid wlo1} ${stippled_hr 1}
+${offset 15}${color FCFEFB}${font}WiFi ${alignr}${wireless_link_qual_perc 
+wlo1}%(${wireless_link_qual wlo1}/${wireless_link_qual_max wlo1}) ${color 126c77}${addr wlo1}
+${offset 15}${font}${color FCFEFB}down ${color FCFEFB}${downspeed wlo1} ${alignr}${color FCFEFB}up ${color FCFEFB}${upspeed wlo1}
+# $hr
+# {addr eth0}
+
+# Showing disk partitions: root, home and Data
+${voffset 18}
+${font Operator Mono Bold:style=Bold Italic:size=12}${color FCFEFB}DISKS ${hr 2}${font}
+${voffset 10}
+${offset 5}${font Operator Mono Bold:style=Bold Italic:size=12}${color 16A085}Slash  ${stippled_hr 1}
+${offset 15}${font Operator Mono Bold:style=Bold Italic:size=9}${color FCFEFB}Free: ${font Operator Mono Bold:style=Bold Italic:size=9}${fs_free /}${alignr}${font Operator Mono Bold:style=Bold Italic:size=9}Used: ${font Operator Mono Bold:style=Bold Italic:size=9}${fs_used /}
+${offset 5}${font Operator Mono Bold:style=Bold Italic:size=12}${color 16A085}Home  ${stippled_hr 1}
+${offset 15}${font Operator Mono Bold:style=Bold Italic:size=9}${color FCFEFB}Free: ${font Operator Mono Bold:style=Bold Italic:size=9}${fs_free /home}${alignr}${font Operator Mono Bold:style=Bold Italic:size=9}Used: ${font Operator Mono Bold:style=Bold Italic:size=9}${fs_used /home}
+# ${offset 15}${font Source Code Pro:size=9}${color FCFEFB}Free: ${font Source Code Pro:size=9}${fs_free /media/Data}${alignr}${font Source Code Pro:size=9,weight:bold}Used: ${font Source Code Pro:size=9}${fs_used /media/Data}
+]];
