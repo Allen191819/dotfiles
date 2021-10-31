@@ -44,20 +44,17 @@ for_window [class="mail thunderbird"]         floating enable resize set 1300 90
 #开机启动项目
 #exec_always --no-startup-id clash
 #exec_always --no-startup-id bash /home/allen/scripts/wallpaper-wrap.sh && sleep 1 && compton --conf ~/.config/compton/compton.conf
-exec_always --no-startup-id bash /home/allen/scripts/wallpaper.sh 
-exec_always compton --conf ~/.config/compton/compton.conf
-exec_always bash ~/.config/polybar/launch.sh --cuts
+exec_always --no-startup-id bash /home/allen/scripts/wallpaper.sh
+exec_always --no-startup-id compton --conf ~/.config/compton/compton.conf
+exec_always --no-startup-id bash ~/.config/polybar/launch.sh --cuts
 #exec_always --no-startup-id variety
 #exec_always --no-startup-id aria2c --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all --conf-path=/home/allen/.aria2c/aria2c.conf -c -D
 exec_always --no-startup-id conky
 #exec_always --no-startup-id mkfifo /tmp/wallpaper; xwinwrap -fs -nf -fdt -ov -- mplayer -shuffle -slave -input file=/tmp/wallpaper -loop 0 -wid WID -nolirc `find ~/Pictures/Livewallpaper -type f`
-#exec_always --no-startup-id compton --config ~/.config/compton/compton.conf
 exec_always --no-startup-id fcitx5
-#exec_always --no-startup-id ~/scripts/wallpaper.sh
 #exec_always --no-startup-id screenkey
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueman-applet
-#exec_always --no-startup-id pamac-tray
 exec_always --no-startup-id optimus-manager-qt
 exec_always --no-startup-id acpi
 exec_always --no-startup-id qv2ray
@@ -68,11 +65,16 @@ exec_always --no-startup-id dunst
 
 #启动常用软件
 bindsym $mod+c exec --no-startup-id chromium
-bindsym $mod+n exec --no-startup-id nautilus  
-bindsym $mod+p exec --no-startup-id listen1
-bindsym $mod+Shift+p exec --no-startup-id virt-manager
-bindsym $mod+b exec --no-startup-id $term -e tty-clock -csDC 7 
-bindsym $mod+z exec --no-startup-id icalingua
+bindsym $mod+b exec --no-startup-id $term -e tty-clock -csDC 7
+bindsym $mod+n workspace number $ws3 exec --no-startup-id nautilus
+bindsym $mod+p workspace number $ws8 exec --no-startup-id listen1
+bindsym $mod+z workspace number $ws7 exec --no-startup-id icalingua
+bindsym $mod+Shift+g workspace number $ws5 exec --no-startup-id gimp
+bindsym $mod+Shift+m workspace number $ws5 exec --no-startup-id kdenlive
+bindsym $mod+Shift+n workspace number $ws4 exec --no-startup-id libreoffiec
+bindsym $mod+Shift+w workspace number $ws4 exec --no-startup-id neovide
+bindsym $mod+Shift+o workspace number $ws9 exec --no-startup-id obs
+bindsym $mod+Shift+p workspace number $ws10 exec --no-startup-id virt-manager
 
 # screenshots
 bindsym Print --release exec /usr/bin/flameshot gui
@@ -128,10 +130,10 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 bindsym $mod+x [urgent=latest] focus
 bindsym $mod+Tab exec --no-startup-id ~/.dotfiles/tag-i3/config/i3/scripts/i3-winmotion
 
@@ -151,10 +153,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -163,7 +165,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+semicolon split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -248,21 +250,21 @@ mode "resize" {
 # Pressing right will grow the window’s width.
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
-	bindsym j resize shrink width 10 px or 10 ppt
-		bindsym k resize grow height 10 px or 10 ppt
-		bindsym l resize shrink height 10 px or 10 ppt
-		bindsym semicolon resize grow width 10 px or 10 ppt
+    bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
-		bindsym Left resize shrink width 10 px or 10 ppt
-		bindsym Down resize grow height 10 px or 10 ppt
-		bindsym Up resize shrink height 10 px or 10 ppt
-		bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
 
 # back to normal: Enter or Escape or $mod+r
-		bindsym Return mode "default"
-		bindsym Escape mode "default"
-		bindsym $mod+r mode "default"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -288,32 +290,32 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 #bar {
-#	font pango:mononoki Nerd Font Mono Regular  12
-#		status_command i3status 
-##		i3bar_command i3bar --transparency
-#		position top
-#		colors {
-#			background #222D31
+#   font pango:mononoki Nerd Font Mono Regular  12
+#       status_command i3status
+##      i3bar_command i3bar --transparency
+#       position top
+#       colors {
+#           background #222D31
 ##background $term_background
-#				statusline #F9FAF9
+#               statusline #F9FAF9
 ##statusline #aacc60
-#				separator  #629692
+#               separator  #629692
 #
 ##                      border  backgr. text
-#				focused_workspace  #F9FAF9 #16a085 #292F34
-#				active_workspace   #595B5B #353836 #FDF6E3
-#				inactive_workspace #595B5B #222D31 #EEE8D5
-#				binding_mode       #16a085 #2C2C2C #F9FAF9
-#				urgent_workspace   #16a085 #FDF6E3 #E5201D
-#		}
+#               focused_workspace  #F9FAF9 #16a085 #292F34
+#               active_workspace   #595B5B #353836 #FDF6E3
+#               inactive_workspace #595B5B #222D31 #EEE8D5
+#               binding_mode       #16a085 #2C2C2C #F9FAF9
+#               urgent_workspace   #16a085 #FDF6E3 #E5201D
+#       }
 #}
 
 # hide/unhide i3status bar
 #bindsym $mod+m bar mode toggle
 # i3lock
 mode "betterlockscreen: Return to lock/Escape to Cancel" {
-	bindsym Return mode "default" exec --no-startup-id betterlockscreen -l dim
-	bindsym Escape mode "default"
+    bindsym Return mode "default" exec --no-startup-id betterlockscreen -l dim
+        bindsym Escape mode "default"
 }
 bindsym $mod+shift+x exec --no-startup-id betterlockscreen -l dim
 #bindsym $mod+Shift+x exec --no-startup-id blurlock
@@ -322,11 +324,11 @@ bindsym $mod+shift+x exec --no-startup-id betterlockscreen -l dim
 set $mode_system select: lock(L) exit(E) reboot(R) poweroff(O) cancel(Esc)
 bindsym $mod+Shift+e mode "$mode_system"
 mode "$mode_system" {
-		bindsym l exec --no-startup-id betterlockscreen -l dim, mode "default"
-		bindsym e exec --no-startup-id i3-msg exit, mode "default"
-		bindsym r exec --no-startup-id systemctl reboot, mode "default"
-		bindsym o exec --no-startup-id systemctl poweroff, mode "default"
-		bindsym Escape mode "default"
+    bindsym l exec --no-startup-id betterlockscreen -l dim, mode "default"
+        bindsym e exec --no-startup-id i3-msg exit, mode "default"
+        bindsym r exec --no-startup-id systemctl reboot, mode "default"
+        bindsym o exec --no-startup-id systemctl poweroff, mode "default"
+        bindsym Escape mode "default"
 }
 set $background #101010
 set $foreground #ffffff
