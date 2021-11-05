@@ -2,7 +2,7 @@
 
 # default options
 display_on=0
-span_image=false
+span_image=true
 lock_timeout=10
 fx_list=(dim blur dimblur pixel dimpixel color)
 dim_level=40

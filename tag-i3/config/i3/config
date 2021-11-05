@@ -36,15 +36,17 @@ for_window [class="steam"]         floating enable resize set 800 600, move posi
 for_window [class="yesplaymusic"]         floating enable resize set 800 600, move position center
 for_window [class="listen1"]         floating enable resize set 1100 800, move position center
 for_window [class="icalingua"]         floating enable resize set 1300 900, move position center
-for_window [class="vncviewer"]         floating enable resize set 1300 900, move position center
-for_window [class="mail thunderbird"]         floating enable resize set 1300 900, move position center
+for_window [class="vncviewer"]         floating enable resize set 1150 900, move position center
+for_window [class="Telegram"]         floating enable resize set 1300 900, move position center
+for_window [class="Thunderbird"]         floating enable resize set 1300 900, move position center
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 #开机启动项目
 #exec_always --no-startup-id clash
 #exec_always --no-startup-id bash /home/allen/.dotfiles/tag-scripts/scripts/wallpaper-wrap.sh && sleep 1 && compton --conf ~/.config/compton/compton.conf
-exec_always --no-startup-id bash /home/allen/./dotfiles/tag-scripts/scripts/wallpaper.sh
+exec_always --no-startup-id bash /home/allen/.screenlayout/layout.sh
+exec_always --no-startup-id bash /home/allen/.dotfiles/tag-scripts/scripts/wallpaper.sh
 exec_always --no-startup-id compton --conf ~/.config/compton/compton.conf
 exec_always --no-startup-id bash ~/.config/polybar/launch.sh --cuts
 #exec_always --no-startup-id variety
@@ -65,6 +67,7 @@ exec_always --no-startup-id dunst
 
 #启动常用软件
 bindsym $mod+c exec --no-startup-id chromium
+bindsym $mod+q exec --no-startup-id jupyter notebook
 bindsym $mod+b exec --no-startup-id $term -e tty-clock -csDC 7
 bindsym $mod+n workspace number $ws3 exec --no-startup-id nautilus
 bindsym $mod+p workspace number $ws8 exec --no-startup-id listen1
@@ -84,7 +87,7 @@ bindsym Print --release exec /usr/bin/flameshot gui
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock -- betterlockscreen --lock
+exec --no-startup-id xss-lock -l -- multilockscreen --lock blur &
 exec —-no-startup-id xset dmps 600
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
@@ -235,6 +238,34 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+# move focused window and swap to that screen
+bindsym $mod+Control+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Control+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Control+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Control+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Control+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Control+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Control+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Control+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Control+9 move container to workspace $ws9; workspace $ws9
+bindsym $mod+Control+0 move container to workspace $ws10; workspace $ws10
+
+# Move workspaces betweeen monitors
+bindsym $mod+Control+m move workspace to output primary
+bindsym $mod+Control+s move workspace to output HDMI-1-0
+bindsym $mod+Control+l move workspace to output right
+bindsym $mod+Control+h move workspace to output left
+bindsym $mod+Control+j move workspace to output down
+bindsym $mod+Control+k move workspace to output up
+
+# Moves container to the active workspace on another screen
+bindsym $mod+Shift+Control+m move container to output primary
+bindsym $mod+Shift+Control+s move container to output HDMI-1-0
+bindsym $mod+Shift+Control+l move container to output right
+bindsym $mod+Shift+Control+h move container to output left
+bindsym $mod+Shift+Control+j move container to output down
+bindsym $mod+Shift+Control+k move container to output up
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -250,10 +281,10 @@ mode "resize" {
 # Pressing right will grow the window’s width.
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
-    bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+    bindsym h resize shrink width 5 px or 5 ppt
+    bindsym j resize grow height 5 px or 5 ppt
+    bindsym k resize shrink height 5 px or 5 ppt
+    bindsym l resize grow width 5 px or 5 ppt
 
 # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -313,18 +344,18 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 # hide/unhide i3status bar
 #bindsym $mod+m bar mode toggle
 # i3lock
-mode "betterlockscreen: Return to lock/Escape to Cancel" {
-    bindsym Return mode "default" exec --no-startup-id betterlockscreen -l dim
+mode "multilockscreen: Return to lock/Escape to Cancel" {
+    bindsym Return mode "default" exec --no-startup-id multilockscreen -l dim
         bindsym Escape mode "default"
 }
-bindsym $mod+shift+x exec --no-startup-id betterlockscreen -l dim
+bindsym $mod+shift+x exec --no-startup-id multilockscreen -l
 #bindsym $mod+Shift+x exec --no-startup-id blurlock
 
 #===power manager===
 set $mode_system select: lock(L) exit(E) reboot(R) poweroff(O) cancel(Esc)
 bindsym $mod+Shift+e mode "$mode_system"
 mode "$mode_system" {
-    bindsym l exec --no-startup-id betterlockscreen -l dim, mode "default"
+    bindsym l exec --no-startup-id multilockscreen -l dim, mode "default"
         bindsym e exec --no-startup-id i3-msg exit, mode "default"
         bindsym r exec --no-startup-id systemctl reboot, mode "default"
         bindsym o exec --no-startup-id systemctl poweroff, mode "default"
