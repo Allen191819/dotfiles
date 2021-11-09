@@ -87,7 +87,7 @@ bindsym Print --release exec /usr/bin/flameshot gui
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock -l -- multilockscreen --lock blur &
+exec --no-startup-id xss-lock -l -- multilockscreen -l  &
 exec —-no-startup-id xset dmps 600
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
