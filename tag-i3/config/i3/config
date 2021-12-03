@@ -34,7 +34,7 @@ for_window [class="Gpick"]                       floating enable resize set 800 
 for_window [class="netease-cloud-music"]         floating enable resize set 800 600, move position center
 for_window [class="steam"]         floating enable resize set 800 600, move position center
 for_window [class="yesplaymusic"]         floating enable resize set 800 600, move position center
-for_window [class="listen1"]         floating enable resize set 1100 800, move position center
+for_window [class="listen1"]         floating enable resize set 1000 800, move position center
 for_window [class="icalingua"]         floating enable resize set 1300 900, move position center
 for_window [class="vncviewer"]         floating enable resize set 1150 900, move position center
 for_window [class="Telegram"]         floating enable resize set 1300 900, move position center
@@ -63,12 +63,14 @@ exec_always --no-startup-id qv2ray
 exec_always --no-startup-id mate-power-manager
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id dunst
+exec_always --no-startup-id clipmenud
 
 
 #启动常用软件
 bindsym $mod+c exec --no-startup-id chromium
 bindsym $mod+q exec --no-startup-id jupyter notebook
 bindsym $mod+b exec --no-startup-id $term -e tty-clock -csDC 7
+bindsym $mod+Shift+y exec --no-startup-id clipmenu
 bindsym $mod+n workspace number $ws3 exec --no-startup-id nautilus
 bindsym $mod+p workspace number $ws8 exec --no-startup-id listen1
 bindsym $mod+z workspace number $ws7 exec --no-startup-id icalingua
@@ -274,6 +276,57 @@ bindsym $mod+Shift+r restart
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
+# set $i3_resurrect i3-resurrect
+
+# Save workspace mode.
+# mode "save" {
+#   bindsym 1 exec "$i3_resurrect save -w 1 --swallow=class,instance,title"
+#   bindsym 2 exec "$i3_resurrect save -w 2 --swallow=class,instance,title"
+#   bindsym 3 exec "$i3_resurrect save -w 3 --swallow=class,instance,title"
+#   bindsym 4 exec "$i3_resurrect save -w 4 --swallow=class,instance,title"
+#   bindsym 5 exec "$i3_resurrect save -w 5 --swallow=class,instance,title"
+#   bindsym 6 exec "$i3_resurrect save -w 6 --swallow=class,instance,title"
+#   bindsym 7 exec "$i3_resurrect save -w 7 --swallow=class,instance,title"
+#   bindsym 8 exec "$i3_resurrect save -w 8 --swallow=class,instance,title"
+#   bindsym 9 exec "$i3_resurrect save -w 9 --swallow=class,instance,title"
+#   bindsym 0 exec "$i3_resurrect save -w 10 --swallow=class,instance,title"
+#
+#   # Back to normal: Enter, Escape, or s
+#   bindsym Escape mode "default"
+# }
+#
+# bindsym $mod+Control+p mode "save"
+#
+# # Restore workspace mode.
+# mode "restore" {
+#   bindsym 1 exec "$i3_resurrect restore -w 1 --programs-only"
+#   bindsym 2 exec "$i3_resurrect restore -w 2 --programs-only"
+#   bindsym 3 exec "$i3_resurrect restore -w 3 --programs-only"
+#   bindsym 4 exec "$i3_resurrect restore -w 4 --programs-only"
+#   bindsym 5 exec "$i3_resurrect restore -w 5 --programs-only"
+#   bindsym 6 exec "$i3_resurrect restore -w 6 --programs-only"
+#   bindsym 7 exec "$i3_resurrect restore -w 7 --programs-only"
+#   bindsym 8 exec "$i3_resurrect restore -w 8 --programs-only"
+#   bindsym 9 exec "$i3_resurrect restore -w 9 --programs-only"
+#   bindsym 0 exec "$i3_resurrect restore -w 10 --programs-only"
+#
+#   bindsym $mod+1 exec "$i3_resurrect restore -w 1 --layout-only"
+#   bindsym $mod+2 exec "$i3_resurrect restore -w 2 --layout-only"
+#   bindsym $mod+3 exec "$i3_resurrect restore -w 3 --layout-only"
+#   bindsym $mod+4 exec "$i3_resurrect restore -w 4 --layout-only"
+#   bindsym $mod+5 exec "$i3_resurrect restore -w 5 --layout-only"
+#   bindsym $mod+6 exec "$i3_resurrect restore -w 6 --layout-only"
+#   bindsym $mod+7 exec "$i3_resurrect restore -w 7 --layout-only"
+#   bindsym $mod+8 exec "$i3_resurrect restore -w 8 --layout-only"
+#   bindsym $mod+9 exec "$i3_resurrect restore -w 9 --layout-only"
+#   bindsym $mod+0 exec "$i3_resurrect restore -w 10 --layout-only"
+#
+#   # Back to normal: Enter, Escape, or n
+#   bindsym Escape mode "default"
+# }
+#
+# bindsym $mod+Control+n mode "restore"
+
 mode "resize" {
 # These bindings trigger as soon as you enter the resize mode
 
@@ -282,9 +335,9 @@ mode "resize" {
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
     bindsym h resize shrink width 5 px or 5 ppt
-    bindsym j resize grow height 5 px or 5 ppt
-    bindsym k resize shrink height 5 px or 5 ppt
-    bindsym l resize grow width 5 px or 5 ppt
+        bindsym j resize grow height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym l resize grow width 5 px or 5 ppt
 
 # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -382,3 +435,4 @@ gaps outer -2
 # Smart gaps (gaps used if only more than one container on the workspace)
 smart_gaps on
 popup_during_fullscreen smart
+show_marks yes

@@ -1,2 +1,2 @@
-/home/allen/Pictures/LivePaper/龙猫山洞.mp4
+/home/allen/Pictures/LivePaper/mylivewallpapers.com-Anime-Cute-Witch.mp4
 

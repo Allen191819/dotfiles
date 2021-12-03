@@ -1,2 +1,5 @@
 /home/allen/.miniconda
 /home/allen/.miniconda/envs/pytorch
+/home/allen/.miniconda/envs/mxnet
+/home/allen/.miniconda/envs/onebot
+/home/allen/.miniconda/envs/testbot

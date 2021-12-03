@@ -28,3 +28,6 @@ set GOPROXY "https://mirrors.aliyun.com/goproxy/"
 
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/allen/.ghcup/bin $PATH # ghcup-env
+
+set CM_LAUNCHER rofi
+set CM_DIR /home/allen/.tmp
