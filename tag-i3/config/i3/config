@@ -48,7 +48,7 @@ for_window [class="Thunderbird"]         floating enable resize set 1300 900, mo
 exec_always --no-startup-id bash /home/allen/.screenlayout/layout.sh
 exec_always --no-startup-id bash /home/allen/.dotfiles/tag-scripts/scripts/wallpaper.sh
 exec_always --no-startup-id compton --conf ~/.config/compton/compton.conf
-exec_always --no-startup-id bash ~/.config/polybar/launch.sh --cuts
+exec_always --no-startup-id bash ~/.dotfiles/tag-polybar/config/polybar/cuts/launch.sh
 #exec_always --no-startup-id variety
 #exec_always --no-startup-id aria2c --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all --conf-path=/home/allen/.aria2c/aria2c.conf -c -D
 exec_always --no-startup-id conky

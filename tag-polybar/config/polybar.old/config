@@ -25,7 +25,7 @@ primary = #ffb52a
 secondary = #7e909e
 alert = #2aa198
 
-[bar/example]
+[bar/mybar]
 bottom = false
 dim-value = 1.0
 enable-ipc=true
@@ -56,11 +56,11 @@ font-3 = ttf-liberation-sans:fixed:pixelsize=13;1
 font-4 = source\han\sans cn:pixelsize=12:antialias=false;1
 font-5 = Font\Awesome\5\Free:style=Solid:pixelsize=12;1
 font-6 = Font\Awesome\5\Brands:style=Regular:pixelsize=12;1
-font-7 = material\icons:pixelsize=12;1 
+font-7 = material\icons:pixelsize=12;1
 font-8 = NotoSans-Regular:size=12;1
 font-9 = Material\Icons:size=12;1
 font-10= Noto\fonts\emoji:size=12;1
-font-11= Nerd Font Mono:size=12;1 
+font-11= Nerd Font Mono:size=12;1
 font-12= FontAwesome:size=12;1
 font-13= "Nerd Font:size=13:antialias=false;1"
 font-14= JetBrainsMono Nerd Font Mono:style=Regular:size=9
@@ -71,11 +71,11 @@ tray-maxsize = 16
 pseudo-transparent = false
 tray-offset-x = 0
 tray-offset-y = 0
-tray-background = #422223
+tray-background = #34565d
 tray-padding = 0
 tray-scale = 1.0
 modules-left = i3 xwindow
-modules-center = 
+modules-center =
 modules-right = wlan networkspeedup networkspeeddown backlight-acpi pulseaudio memory filesystem-home filesystem-slash xkeyboard battery date
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -93,7 +93,7 @@ format-padding = 4
 
 [module/xkeyboard]
 type = internal/xkeyboard
-indicator-icon-default = 
+indicator-icon-default =
 indicator-icon-0 = caps lock;-CL;+CL
 indicator-icon-1 = scroll lock;;+SL
 indicator-icon-2 = num lock;-NL;+NL
@@ -119,9 +119,9 @@ format = <label>
 exec = python /home/allen/.config/polybar/script/spotify.py -f '{artist}: {song}' --font=15
 format-underline = #1db954
 ;control players (optional)
-click-left = playerctl --player=spotify play-pause 
-click-right = playerctl --player=spotify next 
-click-middle = playerctl --player=spotify previous 
+click-left = playerctl --player=spotify play-pause
+click-right = playerctl --player=spotify next
+click-middle = playerctl --player=spotify previous
 
 [module/filesystem]
 type = internal/fs
@@ -294,7 +294,7 @@ interval = 1
 ;date =
 date = %Y.%m.%d %A
 ; date =
-; date-alt =  %Y年%m月%d日 %A 
+; date-alt =  %Y年%m月%d日 %A
 ;time = %H:%M
 time = %H:%M:%S %p
 ; time-alt = %H:%M:%S %p
