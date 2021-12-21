@@ -35,10 +35,10 @@ for_window [class="netease-cloud-music"]         floating enable resize set 800 
 for_window [class="steam"]         floating enable resize set 800 600, move position center
 for_window [class="yesplaymusic"]         floating enable resize set 800 600, move position center
 for_window [class="listen1"]         floating enable resize set 1000 800, move position center
-for_window [class="icalingua"]         floating enable resize set 1300 900, move position center
+for_window [class="icalingua"]         floating enable resize set 1000 900, move position center
 for_window [class="vncviewer"]         floating enable resize set 1150 900, move position center
-for_window [class="Telegram"]         floating enable resize set 1300 900, move position center
-for_window [class="Thunderbird"]         floating enable resize set 1300 900, move position center
+for_window [class="Telegram"]         floating enable resize set 1000 900, move position center
+for_window [class="Thunderbird"]         floating enable resize set 1000 900, move position center
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
