@@ -44,17 +44,15 @@ for_window [class="Thunderbird"]         floating enable resize set 1000 900, mo
 #font pango:DejaVu Sans Mono 8
 #开机启动项目
 #exec_always --no-startup-id clash
-#exec_always --no-startup-id bash /home/allen/.dotfiles/tag-scripts/scripts/wallpaper-wrap.sh && sleep 1 && compton --conf ~/.config/compton/compton.conf
 exec_always --no-startup-id bash /home/allen/.screenlayout/layout.sh
+# exec_always --no-startup-id bash /home/allen/.dotfiles/tag-scripts/scripts/wallpaper-wrap.sh && sleep 1 && pciom
 exec_always --no-startup-id bash /home/allen/.dotfiles/tag-scripts/scripts/wallpaper.sh
-exec_always --no-startup-id compton --conf ~/.config/compton/compton.conf
 exec_always --no-startup-id bash ~/.dotfiles/tag-polybar/config/polybar/cuts/launch.sh
-#exec_always --no-startup-id variety
-#exec_always --no-startup-id aria2c --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all --conf-path=/home/allen/.aria2c/aria2c.conf -c -D
-exec_always --no-startup-id conky
-#exec_always --no-startup-id mkfifo /tmp/wallpaper; xwinwrap -fs -nf -fdt -ov -- mplayer -shuffle -slave -input file=/tmp/wallpaper -loop 0 -wid WID -nolirc `find ~/Pictures/Livewallpaper -type f`
+exec_always --no-startup-id picom
+# exec_always --no-startup-id variety
+# exec_always --no-startup-id aria2c --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all --conf-path=/home/allen/.aria2c/aria2c.conf -c -D
 exec_always --no-startup-id fcitx5
-#exec_always --no-startup-id screenkey
+exec_always --no-startup-id conky
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id optimus-manager-qt
@@ -179,8 +177,6 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
