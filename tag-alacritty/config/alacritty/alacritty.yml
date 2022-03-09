@@ -74,12 +74,13 @@ window:
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
   startup_mode: Windowed
+  opacity: 0.8
 
   # Window title
-  #title: Alacritty
+  title: Alacritty
 
   # Allow terminal applications to change Alacritty's window title.
-  #dynamic_title: true
+  dynamic_title: true
 
   # Window class (Linux/BSD only):
   # class:
@@ -112,7 +113,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) JetBrainsMono Nerd Font
     #   - (Windows) Consolas
-    family: mononoki Nerd Font
+    family: JetBrainsMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -123,7 +124,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family:  OperatorMono Nerd Font
+    family: JetBrainsMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -137,7 +138,7 @@ font:
     family: OperatorMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    #style: Italic
+    style: Italic
 
   # Bold italic font face
   bold_italic:
@@ -347,10 +348,9 @@ font:
 # Base16 Solar Flare 256 - alacritty color config
 # Chuck Harmston (https://chuck.harmston.ch)
 colors:
-  # Default colors
   primary:
-    background: '0x18262f'
-    foreground: '0xa6afb8'
+    background: '#2e3440'
+    foreground: '#d8dee9'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
@@ -386,7 +386,7 @@ colors:
     - { index: 19, color: '0x586875' }
     - { index: 20, color: '0x85939e' }
     - { index: 21, color: '0xe8e9ed' }
-# Colors (One Dark)
+#
 # colors:
   # primary:
     # background: '#282c34'
@@ -449,9 +449,6 @@ colors:
 
 # Background opacity
 #
-# Window opacity as a floating point number from `0.0` to `1.0`.
-# The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.86
 
 selection:
   # This string contains all characters that are used as separators for

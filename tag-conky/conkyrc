@@ -29,9 +29,9 @@ conky.config = {
 --own_window_argb_visual yes
 --own_window_argb_value 100
 
-	alignment = 'bottom_left',
-	gap_x = 1620,
-	gap_y = 250,
+	alignment = 'bottom_right',
+	gap_x = 1620+1920,
+	gap_y = 120,
 	minimum_width = 190, minimum_height = 180,
 
 
@@ -98,6 +98,14 @@ ${font Operator Mono Bold:style=Bold Italic:size=11}CPU1 ${color FCFEFB}${cpu cp
 ${font Operator Mono Bold:style=Bold Italic:size=11}CPU2 ${color FCFEFB}${cpu cpu2}% ${cpubar cpu2} ${freq_g 2}Ghz
 ${font Operator Mono Bold:style=Bold Italic:size=11}CPU3 ${color FCFEFB}${cpu cpu3}% ${cpubar cpu3} ${freq_g 3}Ghz
 ${font Operator Mono Bold:style=Bold Italic:size=11}CPU4 ${color FCFEFB}${cpu cpu4}% ${cpubar cpu4} ${freq_g 4}Ghz
+${font Operator Mono Bold:style=Bold Italic:size=11}CPU5 ${color FCFEFB}${cpu cpu5}% ${cpubar cpu5} ${freq_g 5}Ghz
+${font Operator Mono Bold:style=Bold Italic:size=11}CPU6 ${color FCFEFB}${cpu cpu6}% ${cpubar cpu6} ${freq_g 6}Ghz
+${font Operator Mono Bold:style=Bold Italic:size=11}CPU7 ${color FCFEFB}${cpu cpu7}% ${cpubar cpu7} ${freq_g 7}Ghz
+${font Operator Mono Bold:style=Bold Italic:size=11}CPU8 ${color FCFEFB}${cpu cpu8}% ${cpubar cpu8} ${freq_g 8}Ghz
+${font Operator Mono Bold:style=Bold Italic:size=11}CPU9 ${color FCFEFB}${cpu cpu9}% ${cpubar cpu9} ${freq_g 9}Ghz
+${font Operator Mono Bold:style=Bold Italic:size=11}CPU10 ${color FCFEFB}${cpu cpu10}% ${cpubar cpu10} ${freq_g 10}Ghz
+${font Operator Mono Bold:style=Bold Italic:size=11}CPU11 ${color FCFEFB}${cpu cpu11}% ${cpubar cpu11} ${freq_g 11}Ghz
+${font Operator Mono Bold:style=Bold Italic:size=11}CPU12 ${color FCFEFB}${cpu cpu12}% ${cpubar cpu12} ${freq_g 12}Ghz
 ${font Operator Mono Bold:style=Bold Italic:size=11}RAM $memperc% ${membar memperc}
 ${offset 1}${font Operator Mono Bold:style=Bold Italic:size=10}${color FCFEFB}Procs:${color FCFEFB} $processes  ${color FCFEFB}Run:${color FCFEFB} $running_processes Temp: ${acpitemp}°C
 

@@ -11,6 +11,7 @@
 
 set $mod Mod4
 set $term alacritty
+set $browser brave-browser-beta
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -45,9 +46,10 @@ for_window [class="Thunderbird"]         floating enable resize set 1000 900, mo
 #开机启动项目
 #exec_always --no-startup-id clash
 exec_always --no-startup-id bash /home/allen/.screenlayout/layout.sh
-# exec_always --no-startup-id bash /home/allen/.dotfiles/tag-scripts/scripts/wallpaper-wrap.sh && sleep 1 && pciom
-exec_always --no-startup-id bash /home/allen/.dotfiles/tag-scripts/scripts/wallpaper.sh
+# exec_always --no-startup-id bash /home/allen/scripts/wallpaper-wrap.sh && sleep 1 && pciom
+exec_always --no-startup-id bash /home/allen/scripts/wallpaper.sh
 exec_always --no-startup-id bash ~/.dotfiles/tag-polybar/config/polybar/cuts/launch.sh
+exec_always --no-startup-id bash ~/scripts/weather.sh
 exec_always --no-startup-id picom
 # exec_always --no-startup-id variety
 # exec_always --no-startup-id aria2c --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all --conf-path=/home/allen/.aria2c/aria2c.conf -c -D
@@ -65,7 +67,7 @@ exec_always --no-startup-id clipmenud
 
 
 #启动常用软件
-bindsym $mod+c exec --no-startup-id chromium
+bindsym $mod+c exec --no-startup-id $browser
 bindsym $mod+q exec --no-startup-id jupyter notebook
 bindsym $mod+b exec --no-startup-id $term -e tty-clock -csDC 7
 bindsym $mod+Shift+y exec --no-startup-id clipmenu
@@ -88,11 +90,10 @@ bindsym Print --release exec /usr/bin/flameshot gui
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock -l -- multilockscreen -l  &
-exec —-no-startup-id xset dmps 600
+exec —-no-startup-id xset dmps 3000
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -429,6 +430,6 @@ gaps outer -2
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
+# smart_gaps on
 popup_during_fullscreen smart
 show_marks yes

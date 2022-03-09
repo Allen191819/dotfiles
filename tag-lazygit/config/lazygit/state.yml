@@ -7,3 +7,6 @@ recentrepos:
 - /home/allen/Project/303
 - /home/allen/Project/my_project
 startuppopupversion: 5
+customcommandshistory:
+- q
+hidecommandlog: false
