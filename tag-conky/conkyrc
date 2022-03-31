@@ -30,7 +30,7 @@ conky.config = {
 --own_window_argb_value 100
 
 	alignment = 'bottom_right',
-	gap_x = 1620+1920,
+	gap_x = 1620,
 	gap_y = 120,
 	minimum_width = 190, minimum_height = 180,
 

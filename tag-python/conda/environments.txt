@@ -4,3 +4,4 @@
 /home/allen/.miniconda/envs/nonebot
 /home/allen/.miniconda/envs/tensorflow
 /home/allen/.miniconda/envs/SPlab
+/home/allen/.miniconda/envs/pyvertical-dev
