@@ -21,7 +21,7 @@ set TexLive /usr/local/texlive/2021/bin/x86_64-linux
 set MANPATH /usr/local/man /usr/man /usr/share/man $MANPATH $TexMan
 set INFOPATH $INFOPATH $TexInfo
 
-set PATH /home/allen/.local/bin /home/allen/go/bin /home/allen/.local/share/gem/ruby/3.0.0/bin /opt/cuda/bin $TexLive $PATH
+set PATH /home/allen/.local/bin /home/allen/go/bin /home/allen/.local/share/gem/ruby/3.0.0/bin /opt/cuda/bin /home/allen/.cargo/bin $TexLive $PATH
 set GOPATH /home/allen/go/
 set GOPROXY "https://mirrors.aliyun.com/goproxy/"
 
@@ -30,3 +30,4 @@ set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; se
 
 set CM_LAUNCHER rofi
 set CM_DIR /home/allen/.tmp
+set VAGRANT_DEFAULT_PROVIDER libvirt

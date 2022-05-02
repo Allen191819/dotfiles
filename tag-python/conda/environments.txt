@@ -4,3 +4,5 @@
 /home/allen/.miniconda/envs/pyvertical-dev-tf
 /home/allen/.miniconda/envs/syft-duet
 /home/allen/.miniconda/envs/pytorch
+/home/allen/.miniconda/envs/nonebot
+/home/allen/.miniconda/envs/eBPF
