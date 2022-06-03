@@ -1,9 +1,9 @@
 [global]
-    width = 180
+    width = 220
     origin = top-right
     offset = 6x31
     monitor = 0
-    follow = none
+    follow = mouse
     indicate_hidden = yes
     shrink = no
     transparency = 20
@@ -12,7 +12,7 @@
     separator_color = frame
     sort = yes
     idle_threshold = 120
-    font = Monospace 10
+    font = JetBrains Mono 10
     line_height = 0
     markup = full
     format = "%s %p\n%b"
@@ -46,11 +46,8 @@
     history = ctrl+grave
     context = ctrl+shift+period
 
-
-
-
 [experimental]
-    per_monitor_dpi = true
+    per_monitor_dpi = false
 
 [urgency_low]
     foreground = "#FFFFFF"
