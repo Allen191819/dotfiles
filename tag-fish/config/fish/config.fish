@@ -10,13 +10,15 @@ set proxy_auth true
 
 if test -f /home/allen/.autojump/share/autojump/autojump.fish; . /home/allen/.autojump/share/autojump/autojump.fish; end
 
-set TexMan /usr/local/texlive/2021/texmf-dist/doc/man
-set TexInfo /usr/local/texlive/2021/texmf-dist/doc/info
-set TexLive /usr/local/texlive/2021/bin/x86_64-linux
+
+
+set TexMan /usr/local/texlive/2022/texmf-dist/doc/man
+set TexInfo /usr/local/texlive/2022/texmf-dist/doc/info
+set TexLive /usr/local/texlive/2022/bin/x86_64-linux
 set MANPATH /usr/local/man /usr/man /usr/share/man $MANPATH $TexMan
 set INFOPATH $INFOPATH $TexInfo
 
-set PATH /home/allen/.local/bin /home/allen/go/bin /home/allen/.local/share/gem/ruby/3.0.0/bin /opt/cuda/bin /home/allen/.cargo/bin $TexLive $PATH
+set PATH /home/allen/.local/bin /home/allen/go/bin /home/allen/.local/share/gem/ruby/3.0.0/bin /opt/cuda/bin /home/allen/.cargo/bin /home/allen/.stack/programs/x86_64-linux/ghc-tinfo6-9.0.2/bin $TexLive $PATH
 set GOPATH /home/allen/go/
 set GOPROXY "https://mirrors.aliyun.com/goproxy/"
 

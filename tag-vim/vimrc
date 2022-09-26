@@ -222,4 +222,5 @@ let g:VM_maps['Add Cursor At Word'] = '<C-w>'
 let g:VM_maps['Remove Region']      = 'q'
 
 let g:airline#extensions#tabline#enabled = 1
+set clipboard=unnamed
 
