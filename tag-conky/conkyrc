@@ -113,12 +113,12 @@ ${offset 1}${font Operator Mono Bold:style=Bold Italic:size=10}${color FCFEFB}Pr
 ${font Operator Mono Bold:style=Bold Italic:size=12}${color FCFEFB}NETWORK ${hr 2}${font}
 ${offset 15}${color FCFEFB}GateWay:${color 126c77}${alignr}${gw_ip}
 ${offset 5}${font Operator Mono Bold:style=Bold Italic:size=12}${color 16A085}LAN  ${stippled_hr 1}
-${offset 15}${font}${color FCFEFB}IPv4 Addr ${color 126c77}${alignr}${addr lo}
-${offset 15}${color FCFEFB}${font}down ${color FCFEFB}${downspeed lo} ${alignr}${color FCFEFB}up ${color FCFEFB}${upspeed lo}
-${offset 5}${font Operator Mono Bold:style=Bold Italic:size=12}${color 16A085}${wireless_essid wlo1} ${stippled_hr 1}
+${offset 15}${font}${color FCFEFB}IPv4 Addr ${color 126c77}${alignr}${addr eno1}
+${offset 15}${color FCFEFB}${font}down ${color FCFEFB}${downspeed eno1} ${alignr}${color FCFEFB}up ${color FCFEFB}${upspeed eno1}
+${offset 5}${font Operator Mono Bold:style=Bold Italic:size=12}${color 16A085}${wireless_essid wlan0} ${stippled_hr 1}
 ${offset 15}${color FCFEFB}${font}WiFi ${alignr}${wireless_link_qual_perc 
-wlo1}%(${wireless_link_qual wlo1}/${wireless_link_qual_max wlo1}) ${color 126c77}${addr wlo1}
-${offset 15}${font}${color FCFEFB}down ${color FCFEFB}${downspeed wlo1} ${alignr}${color FCFEFB}up ${color FCFEFB}${upspeed wlo1}
+wlan0}%(${wireless_link_qual wlan0}/${wireless_link_qual_max wlan0}) ${color 126c77}${addr wlan0}
+${offset 15}${font}${color FCFEFB}down ${color FCFEFB}${downspeed wlan0} ${alignr}${color FCFEFB}up ${color FCFEFB}${upspeed wlan0}
 # $hr
 # {addr eth0}
 
@@ -128,7 +128,7 @@ ${font Operator Mono Bold:style=Bold Italic:size=12}${color FCFEFB}DISKS ${hr 2}
 ${voffset 10}
 ${offset 5}${font Operator Mono Bold:style=Bold Italic:size=12}${color 16A085}Slash  ${stippled_hr 1}
 ${offset 15}${font Operator Mono Bold:style=Bold Italic:size=9}${color FCFEFB}Free: ${font Operator Mono Bold:style=Bold Italic:size=9}${fs_free /}${alignr}${font Operator Mono Bold:style=Bold Italic:size=9}Used: ${font Operator Mono Bold:style=Bold Italic:size=9}${fs_used /}
-${offset 5}${font Operator Mono Bold:style=Bold Italic:size=12}${color 16A085}Home  ${stippled_hr 1}
-${offset 15}${font Operator Mono Bold:style=Bold Italic:size=9}${color FCFEFB}Free: ${font Operator Mono Bold:style=Bold Italic:size=9}${fs_free /home}${alignr}${font Operator Mono Bold:style=Bold Italic:size=9}Used: ${font Operator Mono Bold:style=Bold Italic:size=9}${fs_used /home}
+# ${offset 5}${font Operator Mono Bold:style=Bold Italic:size=12}${color 16A085}Home  ${stippled_hr 1}
+# ${offset 15}${font Operator Mono Bold:style=Bold Italic:size=9}${color FCFEFB}Free: ${font Operator Mono Bold:style=Bold Italic:size=9}${fs_free /home}${alignr}${font Operator Mono Bold:style=Bold Italic:size=9}Used: ${font Operator Mono Bold:style=Bold Italic:size=9}${fs_used /home}
 # ${offset 15}${font Source Code Pro:size=9}${color FCFEFB}Free: ${font Source Code Pro:size=9}${fs_free /media/Data}${alignr}${font Source Code Pro:size=9,weight:bold}Used: ${font Source Code Pro:size=9}${fs_used /media/Data}
 ]];
