@@ -1,5 +1,5 @@
 # This file is part of ranger, the console file manager.
-# License: GNU GPL version 3, see the file "AUTHORS" for details.
+ # License: GNU GPL version 3, see the file "AUTHORS" for details.
 # Author: Emanuel Guevel, 2013
 # Author: Delisa Mason, 2015
 

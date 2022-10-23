@@ -35,3 +35,6 @@ eval /home/allen/.miniconda/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 set fzf_fd_opts --hidden --exclude=.git
 set fzf_preview_dir_cmd exa --all --color=always --icons
+
+set -x RUSTUP_UPDATE_ROOT https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
+set -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup
