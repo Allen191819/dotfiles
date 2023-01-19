@@ -36,3 +36,4 @@ eval /home/allen/.miniconda/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 set fzf_fd_opts --hidden --exclude=.git
 set fzf_preview_dir_cmd exa --all --color=always --icons
+eval fzf_configure_bindings --processes=\e\cO
