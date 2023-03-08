@@ -2,7 +2,6 @@ lastupdatecheck: 0
 recentrepos:
 - /home/allen/.dotfiles
 - /home/allen/.config/nvim
-- /home/allen/Downloads/test
 - /home/allen/Workplace/kayos
 startuppopupversion: 5
 customcommandshistory:
