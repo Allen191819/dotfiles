@@ -34,7 +34,8 @@ set -x SNAPS_DIR /home/allen/Workplace/snaps-sp21-s198
 set -x PICO_SDK_PATH /home/allen/Workplace/Raspberry_pi/pico-sdk
 set -x PICO_TOOLCHAIN_PATH /home/allen/Workplace/Raspberry_pi/toolchain/gcc-arm-none-eabi-10.3-2021.10
 set -x DEBUG_CODEIUM error
-
+set -x TMUX_TMPDIR /home/allen/.cache/tmux/tmp
+set -x EDITOR nvim
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 eval /home/allen/.miniconda/bin/conda "shell.fish" "hook" $argv | source

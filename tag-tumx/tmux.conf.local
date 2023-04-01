@@ -417,3 +417,10 @@ set-option -g mouse on
 
 setw -g window-active-style 'bg=black' # bg color of active pane
 setw -g window-style 'bg=black' # bg color of inactive pane(s)
+set -g @plugin 'sainnhe/tmux-fzf'
+set -g @plugin 'tmux-plugins/tmux-yank'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+
+set -g @continuum-save-interval '1440'
+
+
