@@ -18,7 +18,7 @@ set -x TexLive /usr/local/texlive/2022/bin/x86_64-linux
 set -x MANPATH /usr/local/man /usr/man /usr/share/man $MANPATH $TexMan
 set -x INFOPATH $INFOPATH $TexInfo
 
-set -x PATH /home/allen/.local/bin /home/allen/go/bin /home/allen/.local/share/gem/ruby/3.0.0/bin /opt/cuda/bin /home/allen/.cargo/bin /home/allen/.stack/programs/x86_64-linux/ghc-tinfo6-9.0.2/bin /home/allen/Android/Sdk/build-tools/30.0.3 $TexLive $PATH
+set -x PATH /home/allen/.local/bin /home/allen/go/bin /home/allen/.local/share/gem/ruby/3.0.0/bin /opt/cuda/bin /home/allen/.cargo/bin /home/allen/.stack/programs/x86_64-linux/ghc-tinfo6-9.0.2/bin /home/allen/Android/Sdk/build-tools/30.0.3 /home/allen/.npm-global $TexLive $PATH
 set -x GOPATH /home/allen/go/
 set -x GOPROXY "https://mirrors.aliyun.com/goproxy/"
 

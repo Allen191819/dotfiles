@@ -117,3 +117,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Created by newuser for 5.9
+export REPO_DIR=/home/allen/Workplace/sp21-s198
+export SNAPS_DIR=/home/allen/Workplace/snaps-sp21-s198
