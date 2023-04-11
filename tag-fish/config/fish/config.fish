@@ -17,12 +17,10 @@ set -x TexLive /usr/local/texlive/2022/bin/x86_64-linux
 set -x MANPATH /usr/local/man /usr/man /usr/share/man $MANPATH $TexMan
 set -x INFOPATH $INFOPATH $TexInfo
 
-set -x PATH /home/allen/.local/bin /home/allen/go/bin /home/allen/.local/share/gem/ruby/3.0.0/bin /opt/cuda/bin /home/allen/.cargo/bin /home/allen/.stack/programs/x86_64-linux/ghc-tinfo6-9.0.2/bin /home/allen/Android/Sdk/build-tools/30.0.3 $TexLive $PATH
+set -x PATH /home/allen/.local/bin /home/allen/go/bin /home/allen/.local/share/gem/ruby/3.0.0/bin /opt/cuda/bin /home/allen/.cargo/bin /home/allen/Android/Sdk/build-tools/30.0.3 /home/allen/.npm-global/bin $TexLive $PATH
 set -x GOPATH /home/allen/go/
 set -x GOPROXY "https://mirrors.aliyun.com/goproxy/"
 
-
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/allen/.ghcup/bin $PATH # ghcup-env
 
 set -x CM_LAUNCHER rofi
 set -x CM_DIR /home/allen/.tmp
@@ -43,3 +41,7 @@ eval /home/allen/.miniconda/bin/conda "shell.fish" "hook" $argv | source
 set fzf_fd_opts --hidden --exclude=.git
 set fzf_preview_dir_cmd exa --all --color=always --icons
 eval fzf_configure_bindings --processes=\e\cO
+
+#set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/allen/.ghcup/bin # ghcup-env
+
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/allen/.ghcup/bin # ghcup-env
