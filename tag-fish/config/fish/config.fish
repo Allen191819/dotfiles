@@ -18,14 +18,12 @@ set -x TexLive /usr/local/texlive/2022/bin/x86_64-linux
 set -x MANPATH /usr/local/man /usr/man /usr/share/man $MANPATH $TexMan
 set -x INFOPATH $INFOPATH $TexInfo
 
-set -x PATH /home/allen/.local/bin /home/allen/go/bin /home/allen/.local/share/gem/ruby/3.0.0/bin /opt/cuda/bin /home/allen/.cargo/bin /home/allen/.stack/programs/x86_64-linux/ghc-tinfo6-9.0.2/bin /home/allen/Android/Sdk/build-tools/30.0.3 /home/allen/.npm-global $TexLive $PATH
+set -x PATH /home/allen/.local/bin /home/allen/go/bin /home/allen/.local/share/gem/ruby/3.0.0/bin /opt/cuda/bin /home/allen/.cargo/bin /home/allen/Android/Sdk/build-tools/30.0.3 /home/allen/.npm-global $TexLive $PATH
 set -x GOPATH /home/allen/go/
 set -x GOPROXY "https://mirrors.aliyun.com/goproxy/"
 
 set -x REPO_DIR "/home/allen/Workplace/sp21-s198"
 set -x SNAPS_DIR "/home/allen/Workplace/snaps-sp21-s198"
-
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/allen/.ghcup/bin $PATH # ghcup-env
 
 set -x CM_LAUNCHER rofi
 set -x CM_DIR /home/allen/.tmp
@@ -40,3 +38,5 @@ set fzf_preview_dir_cmd exa --all --color=always --icons
 
 set -x RUSTUP_UPDATE_ROOT https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
 set -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup
+
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/allen/.ghcup/bin # ghcup-env
