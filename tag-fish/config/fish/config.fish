@@ -40,3 +40,5 @@ set -x RUSTUP_UPDATE_ROOT https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
 set -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/allen/.ghcup/bin # ghcup-env
+
+set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
