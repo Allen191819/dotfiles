@@ -1,2 +1,4 @@
 /home/allen/.miniconda
 /home/allen/.miniconda/envs/ctf
+/home/allen/.miniconda/envs/torch
+/home/allen/.miniconda/envs/python2
