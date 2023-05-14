@@ -2,3 +2,5 @@
 /home/allen/.miniconda/envs/ctf
 /home/allen/.miniconda/envs/torch
 /home/allen/.miniconda/envs/python2
+/home/allen/.miniconda/envs/scapy
+/home/allen/.miniconda/envs/flask

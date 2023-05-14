@@ -6,7 +6,7 @@ end
 scheme set tomorrow
 
 set proxy_host 127.0.0.1:8889
-set proxy_auth true
+set proxy_auth false
 
 if test -f /home/allen/.autojump/share/autojump/autojump.fish; . /home/allen/.autojump/share/autojump/autojump.fish; end
 
