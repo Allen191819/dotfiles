@@ -5,7 +5,7 @@ if status is-interactive
 end
 
 set proxy_host 127.0.0.1:8889
-set proxy_auth true
+set proxy_auth false
 
 if test -f /home/allen/.autojump/share/autojump/autojump.fish; . /home/allen/.autojump/share/autojump/autojump.fish; end
 
@@ -40,8 +40,15 @@ eval /home/allen/.miniconda/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 set fzf_fd_opts --hidden --exclude=.git
 set fzf_preview_dir_cmd exa --all --color=always --icons
+set -gx EDITOR "nvim"
+set fzf_dir_opts --bind "ctrl-o:execute($EDITOR {} &> /dev/tty)"
 eval fzf_configure_bindings --processes=\e\cO
+
 
 #set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/allen/.ghcup/bin # ghcup-env
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/allen/.ghcup/bin # ghcup-env
+
+# opam configuration
+source /home/allen/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+scheme set dracula

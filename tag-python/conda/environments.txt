@@ -1,3 +1,5 @@
 /home/allen/.miniconda
 /home/allen/.miniconda/envs/pytorch
 /home/allen/.miniconda/envs/ctf
+/home/allen/.miniconda/envs/pwn
+/home/allen/.miniconda/envs/opencv
